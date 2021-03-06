@@ -68,7 +68,6 @@ class ShellCommand():
             return self.clean()
 
         it = iter(self.stdout.rstrip().split('\n'))
-        ig = iter(self.stdout.rstrip().split('\n'))
         xs = zip(self.instructions, self.parsers)
 
         for ((command, *_), parser), last in hint_last(xs):
